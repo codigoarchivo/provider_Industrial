@@ -1,0 +1,25 @@
+:root {
+  --primary: #061437;
+  --primary-dark: #040e27;
+  --primary-ligth: #1e263b;
+
+  --secundary: #fb7400;
+  --secundary-dark: #d0542e;
+
+  --letters-form: #9a9a9a;
+  --button-form: #2f374c;
+  --icons-form: #000000;
+
+  --button-subs: #fbad02;
+  --letters-footer: #99e3c2;
+
+  --white: #ffffff;
+  --white-dark: #dcdcde;
+}
+.text-primary {
+  color: var(--primary-dark) !important;
+}
+.nav-link:hover {
+  border-bottom: solid 2px var(--secundary-dark);
+  color: var(--secundary) !important;
+}
