@@ -15,40 +15,20 @@ function industry(provider, elmnt, color, text) {
 }
 document.getElementById("defaultOpen").click();
 
-let slideIndex = 0;
-showSlides();
-function showSlides() {
-  const slides = document.getElementsByClassName("mySlides");
+const medio = document.querySelector("#medio");
+const reproducir = document.getElementById("reproducir");
 
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slideIndex++;
-
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
-}
-
-const medio = document.getElementById("medio");
-const botones = document.getElementById("botones");
 function iniciar() {
-  reproducir = document.getElementById("reproducir");
   reproducir.addEventListener("click", presionar, false);
 }
 function presionar() {
   if (!medio.paused && !medio.ended) {
     medio.pause();
-    reproducir.innerHTML = "Reproducir";
-    botones.style.display = "none";
+    medio.setAttribute('poster','newvalue')
+    reproducir.style.opacity = 1;
   } else {
     medio.play();
-    reproducir.innerHTML = "Pausa";
-    botones.style.display = "block";
+    reproducir.style.opacity = 0;
   }
-  botones.style.display = "block";
 }
 window.addEventListener("load", iniciar, false);

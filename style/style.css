@@ -67,7 +67,6 @@
 }
 /* header */
 .header {
-  height: 100vh;
   background-image: linear-gradient(
       to right bottom,
       rgba(7, 12, 24, 0.657),
@@ -89,10 +88,10 @@
   position: absolute;
   background: var(--secundary-dark);
   height: 5px;
-  top: 106%;
+  top: 107%;
   left: 0;
-  width: 0%;
   transition: width 0.5s ease;
+  width: 0%;
 }
 .nav-a:hover::before {
   width: 100%;
@@ -106,6 +105,18 @@
 .btn-form {
   background-color: var(--button-form);
 }
+.form-control::-webkit-input-placeholder {
+  color: var(--button-form) !important;
+}
+.form-control::-moz-placeholder {
+  color: var(--button-form) !important;
+}
+.form-control:-ms-input-placeholder {
+  color: var(--button-form) !important;
+}
+.form-control::-ms-input-placeholder {
+  color: var(--button-form) !important;
+}
 .form-control::placeholder {
   color: var(--button-form) !important;
 }
@@ -114,9 +125,23 @@
   outline: none;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.textarea::-webkit-input-placeholder {
+  color: var(--button-form) !important;
+}
+.textarea::-moz-placeholder {
+  color: var(--button-form) !important;
+}
+.textarea:-ms-input-placeholder {
+  color: var(--button-form) !important;
+}
+.textarea::-ms-input-placeholder {
+  color: var(--button-form) !important;
 }
 .textarea::placeholder {
   color: var(--button-form) !important;
@@ -141,22 +166,38 @@
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
-.section-one {
-}
 .position-i {
   top: 49%;
   left: 44%;
 }
 .position-clip-path {
-  clip-path: polygon(40% 0, 0 0, 0 80%);
+  -webkit-clip-path: polygon(40% 0, 0 0, 0 80%);
+          clip-path: polygon(40% 0, 0 0, 0 80%);
   top: 0%;
   left: 5.6%;
 }
 
 /* section-two */
+.carousel-indicators {
+  bottom: -8% !important;
+}
+.slide-button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: var(--button-subs) !important;
+}
+.slide-button2 {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: var(--white) !important;
+  border: inset !important;
+}
 .space-rouded {
   padding: 0.9rem;
-  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
   left: 5%;
   top: 15%;
 }
@@ -183,108 +224,6 @@
 .tabcontent {
   display: none;
   text-align: center;
-}
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-  color: black;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: black;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 /* section-thee */
 .section-three {
@@ -322,10 +261,14 @@
 .bg-video {
   position: relative;
 }
+.carousel-inner {
+  padding: 1.5rem;
+}
 .repro-video {
   height: auto;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .btn-video {
   position: absolute;
@@ -334,7 +277,6 @@
   transform: translate(-50%, -50%);
 }
 .bg-video-text {
-  position: absolute;
   position: absolute;
   bottom: -10%;
   left: 50%;
@@ -362,6 +304,7 @@ form.subscribe-form {
 .subscribe-css-email-field {
   padding: 10px 30px;
   border: none;
+  width: 100%;
 }
 .subscribe-css-email-field:focus {
   outline: none;
@@ -371,11 +314,8 @@ form.subscribe-form {
   padding: 10px 30px;
   border: none;
 }
-.subscribe-css-email-button:hover {
-}
+
 /* footer */
-.footer-cont {
-}
 .icon-borde {
   width: 30px !important;
   height: 30px;

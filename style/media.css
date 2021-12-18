@@ -1,0 +1,48 @@
+/* header */
+@media only screen and (max-width: 1399px) {
+  .title-cont {
+    font-size: 2.95rem;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .section-four {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .title-cont {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .flex-direc {
+    flex-direction: column !important;
+  }
+  /* .header-ul {
+  } */
+  .header-ul li {
+    margin-top: 2rem;
+    justify-items: start;
+    width: 80%;
+    text-align: center;
+  }
+  .ocult {
+    display: none !important;
+  }
+  .spaceT-2 {
+    margin-top: 2rem;
+  }
+  .spaceXP-0 {
+    padding-right: 0% !important;
+    padding-left: 0% !important;
+  }
+  .section-four {
+    padding: 0;
+  }
+  .subscribe-css-email-field {
+    left: 0%;
+  }
+  .subscribe-css-email-button {
+    right: 0%;
+  }
+}
