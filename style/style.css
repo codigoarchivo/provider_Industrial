@@ -5,10 +5,13 @@
 
   --secundary: #fb7400;
   --secundary-dark: #d0542e;
+  --secundary-transp: #d0542e5e;
 
   --letters-form: #9a9a9a;
   --button-form: #2f374c;
   --icons-form: #000000;
+
+  --font-video: #00000054;
 
   --button-subs: #fbad02;
   --letters-footer: #99e3c2;
@@ -16,10 +19,372 @@
   --white: #ffffff;
   --white-dark: #dcdcde;
 }
-.text-primary {
-  color: var(--primary-dark) !important;
+.text-blue {
+  color: var(--primary) !important;
 }
-.nav-link:hover {
-  border-bottom: solid 2px var(--secundary-dark);
+.text-blue-darke {
+  color: var(--primary-dark);
+}
+.text-blue-ligth {
+  color: var(--primary-ligth);
+}
+.text-green-ligth {
+  color: var(--letters-footer);
+}
+.text-orange {
+  color: var(--secundary);
+}
+.text-orange-dark {
+  color: var(--secundary-dark);
+}
+.bag-yellow {
+  background-color: var(--button-subs);
+}
+.bag-orange-dark {
+  background-color: var(--secundary-dark);
+}
+.bag-orange-ligth {
+  background-color: var(--secundary);
+}
+.bag-white-dark {
+  background-color: var(--white-dark);
+}
+.bg-blue {
+  background-color: var(--primary);
+}
+.bg-blue-dark {
+  background-color: var(--primary-dark);
+}
+.bg-blue-ligth {
+  background-color: var(--primary-ligth);
+}
+.font-one {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.font-two {
+  font-size: 0.9rem;
+}
+/* header */
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(7, 12, 24, 0.657),
+      rgba(7, 12, 24, 0.657)
+    ),
+    url(/assets/img/hero_1.png);
+  background-size: cover;
+}
+.header-ul {
+  background-color: rgba(4, 14, 39, 0.794);
+}
+.nav-a {
+  position: relative;
+  text-transform: uppercase;
+  transition: color 0.5s ease;
+}
+.nav-a::before {
+  content: "";
+  position: absolute;
+  background: var(--secundary-dark);
+  height: 5px;
+  top: 106%;
+  left: 0;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+.nav-a:hover::before {
+  width: 100%;
+}
+.nav-a:hover {
   color: var(--secundary) !important;
+}
+.pdl-0 {
+  padding-left: 0;
+}
+.btn-form {
+  background-color: var(--button-form);
+}
+.form-control::placeholder {
+  color: var(--button-form) !important;
+}
+.textarea {
+  padding: 1rem 0.75rem;
+  outline: none;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.textarea::placeholder {
+  color: var(--button-form) !important;
+}
+.title-cont {
+  font-size: 3.5rem;
+}
+.hr-title {
+  width: 10%;
+  padding: 0.2rem;
+}
+.hr-title2 {
+  width: 20%;
+  padding: 0.05rem;
+}
+.icon-info {
+  cursor: pointer;
+  z-index: 0;
+}
+/* section-one */
+.margin-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.section-one {
+}
+.position-i {
+  top: 49%;
+  left: 44%;
+}
+.position-clip-path {
+  clip-path: polygon(40% 0, 0 0, 0 80%);
+  top: 0%;
+  left: 5.6%;
+}
+
+/* section-two */
+.space-rouded {
+  padding: 0.9rem;
+  clip-path: circle(50% at 50% 50%);
+  left: 5%;
+  top: 15%;
+}
+.border-marcador,
+.border-marcador2 {
+  border-radius: 50%;
+  padding: 1.2rem;
+  left: 6%;
+  top: 6%;
+}
+.border-marcador {
+  border: 0.3px dotted var(--button-subs);
+}
+.border-marcador2 {
+  border: 0.3px dotted var(--white);
+}
+.tablink {
+  width: 30%;
+}
+.tablink:hover {
+  background-color: var(--secundary-dark);
+}
+
+.tabcontent {
+  display: none;
+  text-align: center;
+}
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* section-thee */
+.section-three {
+  padding: 6rem 4rem;
+}
+.services-img {
+  width: 20%;
+}
+/* section-four  */
+.section-four {
+  padding: 0 10rem;
+}
+.testimonials {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(7, 12, 24, 0.657),
+      rgba(7, 12, 24, 0.657)
+    ),
+    url(/assets/img/bg_1.jpg);
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.testimonials-cont {
+  padding: 5rem 1rem;
+}
+.testimonials-p {
+  font-size: 2.8rem;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.bg-video {
+  position: relative;
+}
+.repro-video {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+.btn-video {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bg-video-text {
+  position: absolute;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.testimonials-svg {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  fill: var(--secundary-dark);
+  stroke: var(--secundary-dark);
+  background-color: rgba(black, 0.2);
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+/* section-six */
+form.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.subscribe-css-email-field {
+  padding: 10px 30px;
+  border: none;
+}
+.subscribe-css-email-field:focus {
+  outline: none;
+}
+.subscribe-css-email-button {
+  position: absolute;
+  padding: 10px 30px;
+  border: none;
+}
+.subscribe-css-email-button:hover {
+}
+/* footer */
+.footer-cont {
+}
+.icon-borde {
+  width: 30px !important;
+  height: 30px;
+  padding: 0.3rem;
+}
+.img-footer {
+  height: auto;
+  width: 13%;
+}
+.footer-info {
+  padding: 5rem 9rem;
 }
