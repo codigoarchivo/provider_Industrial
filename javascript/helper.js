@@ -15,20 +15,25 @@ function industry(provider, elmnt, color, text) {
 }
 document.getElementById("defaultOpen").click();
 
-const medio = document.querySelector("#medio");
-const reproducir = document.getElementById("reproducir");
+const medio = document.querySelectorAll("#medio");
+const reproducir = document.querySelectorAll("#reproducir");
 
 function iniciar() {
-  reproducir.addEventListener("click", presionar, false);
+  reproducir.forEach((element) => {
+    element.addEventListener("click", ({ target }) => {
+      medio.forEach((me) => {
+        if (!me.paused && !me.ended) {
+          me.pause();
+          target.style.opacity = 1;
+        } else {
+          me.play();
+          target.style.opacity = 0;
+        }
+      });
+    });
+  });
 }
-function presionar() {
-  if (!medio.paused && !medio.ended) {
-    medio.pause();
-    medio.setAttribute('poster','newvalue')
-    reproducir.style.opacity = 1;
-  } else {
-    medio.play();
-    reproducir.style.opacity = 0;
-  }
-}
+
 window.addEventListener("load", iniciar, false);
+
+
