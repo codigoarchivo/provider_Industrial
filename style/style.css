@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
 :root {
   --primary: #061437;
   --primary-dark: #040e27;
@@ -126,8 +130,8 @@
   background-clip: padding-box;
   border: 1px solid #ced4da;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -172,7 +176,7 @@
 }
 .position-clip-path {
   -webkit-clip-path: polygon(40% 0, 0 0, 0 80%);
-          clip-path: polygon(40% 0, 0 0, 0 80%);
+  clip-path: polygon(40% 0, 0 0, 0 80%);
   top: 0%;
   left: 5.6%;
 }
@@ -197,7 +201,7 @@
 .space-rouded {
   padding: 0.9rem;
   -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
   left: 5%;
   top: 15%;
 }
@@ -268,7 +272,7 @@
   height: auto;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .btn-video {
   position: absolute;
@@ -323,7 +327,7 @@ form.subscribe-form {
 }
 .img-footer {
   height: auto;
-  width: 13%;
+  width: 5%;
 }
 .footer-info {
   padding: 5rem 9rem;
